@@ -9,22 +9,32 @@ let arr = input.split('')
 
     // console.log(arr);
 
-const binaryConversion = (params) => {
-    if (params <=1) {
-        console.log(params);
+let toBinary = (n) => {
+    let remArr = []
+    let resArr = []
+    if (n>=0) {
+        while (n) {
+            let q = parseInt(n / 2)
+            remArr.push(n % 2)
+            n = q            
+        }
+        for (let i = remArr.length - 1; i >= 0; i--){
+            resArr.push(remArr[i])
+        }
+        return parseInt(resArr.join(''))
     } else {
-        binaryConversion(params / 2)
-        console.log(params%2);
+        return 
     }
 }
+
 
 const compare = (newArr) =>{
     for (const i in newArr) {
         if (newArr.hasOwnProperty(i)) {
             let element = newArr[i]; 
             let asciiValue = ascii.ascii[element]
-            console.log(asciiValue);
-            console.log(newArr);
+            console.log(toBinary(asciiValue));
+            console.log(newArr)
             
         }
     }
@@ -33,3 +43,4 @@ const compare = (newArr) =>{
 
 
 compare(arr)
+// binaryConversion(arr)

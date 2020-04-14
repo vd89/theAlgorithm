@@ -1,4 +1,4 @@
-let ascii = {
+const ascii = {
   A: 65,
   B: 66,
   C: 67,
