@@ -1,6 +1,6 @@
 # The First Algorithm 
 
-    WriteanAlgorithmtoextractinputEnglishLanguagesentencecharactersandconvertthecharacterstothe8-bitBINARYpatterns.ImporttheASCIIObjectattached into your source code.
+    Write an Algorithm to extract input English Language sentence characters and convert the characters to the 8-bit BINARY patterns. Import the ASCII Object attached into your source code.
 
 
     Note :
