@@ -9,27 +9,21 @@ let arr = input.split("");
 
 // console.log(arr);
 
-let toBinary = (n) => {
-  let remArr = [];
-  let resArr = [];
-  if (n >= 0) {
-    while (n) {
-      let q = parseInt(n / 2);
-      remArr.push(n % 2);
-      n = q;
-    }
-    for (let i = remArr.length; i >= 0; i--) {
-      resArr.push(remArr[i]);
-      if (resArr[0] == undefined) {
-        resArr.shift();
-        resArr.unshift(0);
+const toBinary = (n, bin = "") => {
+     
+  if (n<= 1) {
+      bin = n + bin
+      const ofZero = 8 - bin.length
+      for (let i = 0; i < ofZero; i++){
+          bin = "0" +bin
       }
-    }
-    return resArr.join("");
+      return bin
   } else {
-    return;
+      bin = Math.floor(n % 2) + bin
+      return toBinary(Math.floor(n/2),bin)
   }
-};
+      
+}
 
 
 
